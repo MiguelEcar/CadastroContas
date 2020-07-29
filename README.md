@@ -12,9 +12,9 @@ Full documentation can be seen at `http://localhost:8080/swagger-ui.html`
 ## Endpoints
 - [POST] `/account` include a new account a return json with ID.
 - [GET] `/account/all` returns all accounts with fees calculated.
-- [GET] `/account/filter?page=0&size=10` returns paged list of account with optional filter by name and date (between)
-- [GET] `/account/filter?name=XX` returns paged list of account with optional filter by name and date (between)
-- [GET] `/account/filter?dateFrom=2020-01-01&dateTo=2020-08-31` returns paged list of account with optional filter by name and date (between)
+- [GET] `/account/filter?page=0&size=10` returns paged list
+- [GET] `/account/filter?name=XX` returns paged list filtered by name
+- [GET] `/account/filter?dateFrom=2020-01-01&dateTo=2020-08-31` returns paged list filtered by date (between)
 
 ## Endpoints
 
