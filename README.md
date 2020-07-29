@@ -1,7 +1,7 @@
 # Account Register
 
 ## Implementation
-This repository contains a Accounts Registrer application.
+This repository contains a Accounts Register application.
 The information is stored in a Database.
 
 For testing purposes, it uses H2 Database, which may be easily replaced for production uses.
@@ -93,6 +93,23 @@ On Linux,
     sudo ./mvnw spring-boot:run
 ```
 
+## Running - For Docker Users
+
+After cloning, or download and extract the repository:
+
+### Spring Boot API
+
+In the root folder of Spring Boot project
+
+Build image
+```ps
+    docker build -t accounts .
+```
+
+Run image
+```ps
+    docker run -p 8080:8080 --rm -it accounts:latest
+```
 
 
 ### Application defaults
