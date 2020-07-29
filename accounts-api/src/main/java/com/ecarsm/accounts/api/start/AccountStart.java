@@ -26,7 +26,7 @@ public class AccountStart implements ApplicationRunner {
         Account account = new Account();
         
         account.setName("First Account");
-        account.setMainValue(BigDecimal.valueOf(1.0));
+        account.setMainValue(BigDecimal.valueOf(100.0));
         account.setDueDate(LocalDate.now());
         
         this.accountService.save(account);

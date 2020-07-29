@@ -2,10 +2,13 @@ package com.ecarsm.accounts.api.model.account.resources;
 
 import com.ecarsm.accounts.api.baseline.exception.MyException;
 import com.ecarsm.accounts.api.model.account.Account;
+import com.ecarsm.accounts.api.model.account.repository.filter.AccountFilter;
 import com.ecarsm.accounts.api.model.account.service.AccountService;
 import java.util.List;
 import lombok.Getter;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -58,6 +61,19 @@ public class AccountResource {
         List<Account> resp = this.service.all();
 
         return resp != null ? ResponseEntity.ok(resp) : ResponseEntity.noContent().build();
+    }
+
+    /**
+     * Returns a page of Accounts filtered
+     *
+     * @param filter
+     * @param page
+     * @return
+     * @throws com.ecarsm.accounts.api.baseline.exception.MyException
+     */
+    @GetMapping("/filter")
+    public Page<Account> page(AccountFilter filter, Pageable page) throws MyException {
+        return this.service.page(filter, page);
     }
 
 }
