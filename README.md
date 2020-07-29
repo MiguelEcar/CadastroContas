@@ -18,7 +18,7 @@ Full documentation can be seen at `http://localhost:8080/swagger-ui.html`
 
 ## Endpoints
 
-### 1: [POST] `/tools`
+### 1: [POST] `/account`
 
 ```json
     {
